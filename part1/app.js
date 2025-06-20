@@ -25,5 +25,5 @@ async function seedDatabase() {
             await connection.query('
             INSERT INTO Dogs (owner_id, name, size) VALUES
             (1, 'Max', 'medium'),
-(3, 'Bella', 'small');
-`);
+            (3, 'Bella', 'small');
+            ');
