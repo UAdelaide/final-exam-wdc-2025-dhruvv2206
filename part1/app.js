@@ -21,3 +21,5 @@ async function seedDatabase() {
             ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
             ('carol123', 'carol@example.com', 'hashed789', 'owner');
           `);
+
+await connection
