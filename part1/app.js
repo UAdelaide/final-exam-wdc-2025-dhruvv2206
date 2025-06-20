@@ -67,3 +67,26 @@ async function seedDatabase() {
         }
       });
 
+      app.get('/api/walkers/summary', async (req, res) => {
+        try {
+          const [rows] = await connection.query(`
+            SELECT
+              U.username AS walker_username,
+              COUNT(R.rating_id) AS total_ratings,
+              ROUND(AVG(R.rating), 1) AS average_rating,
+              COUNT(CASE WHEN WR.status = 'completed' THEN 1 END) AS completed_walks
+            FROM Users U
+            LEFT JOIN WalkApplications WA ON U.user_id = WA.walker_id
+            LEFT JOIN WalkRequests WR ON WA.request_id = WR.request_id
+            LEFT JOIN WalkRatings R ON WR.request_id = R.request_id
+            WHERE U.role = 'walker'
+            GROUP BY U.username;
+          `);
+          res.json(rows);
+        } catch (err) {
+          res.status(500).json({ error: 'Failed to fetch walker summary.' });
+        }
+      });
+
+
+
