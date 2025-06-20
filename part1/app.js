@@ -13,4 +13,4 @@ const dbConfig = {
 
 async function seedDatabase() {
     try{
-        const[user]
+        const[users[0].count ===0] {
