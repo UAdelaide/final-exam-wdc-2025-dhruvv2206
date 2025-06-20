@@ -38,3 +38,5 @@ async function seedDatabase() {
         console.error('Seeding error:', err);
       }
     }
+
+    
