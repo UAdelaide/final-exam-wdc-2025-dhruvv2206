@@ -22,8 +22,8 @@ async function seedDatabase() {
             ('carol123', 'carol@example.com', 'hashed789', 'owner');
           ');
 
-    await connection.query('
-INSERT INTO Dogs (owner_id, name, size) VALUES
-(1, 'Max', 'medium'),
+            await connection.query('
+            INSERT INTO Dogs (owner_id, name, size) VALUES
+            (1, 'Max', 'medium'),
 (3, 'Bella', 'small');
 `);
