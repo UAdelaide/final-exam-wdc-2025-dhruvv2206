@@ -22,4 +22,4 @@ async function seedDatabase() {
             ('carol123', 'carol@example.com', 'hashed789', 'owner');
           `);
 
-await connection
+await connection.query(
