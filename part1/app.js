@@ -12,4 +12,5 @@ const dbConfig = {
   let connection;
 
 async function seedDatabase() {
-
+    try{
+        const[user]
