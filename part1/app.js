@@ -88,5 +88,16 @@ async function seedDatabase() {
         }
       });
 
+      (async () => {
+        try {
+          connection = await mysql.createConnection(dbConfig);
+          await seedDatabase();
 
+          app.listen(port, () => {
+            console.log(`Server running on http://localhost:${port}`);
+          });
+        } catch (err) {
+          console.error('Failed to start:', err);
+        }
+      })();
 
