@@ -12,6 +12,7 @@ const dbConfig = {
   let connection;
 
 async function seedDatabase() {
-    try
-    const [users] = await connection.query('SELECT COUNT(*) as count FROM Users');
-    if (users[0].count === 0) {
+    try {
+        const [users] = await connection.query('SELECT COUNT(*) as count FROM Users');
+        if (users[0].count === 0) {
+            await connection.query(`
