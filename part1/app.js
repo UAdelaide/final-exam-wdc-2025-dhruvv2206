@@ -15,15 +15,15 @@ async function seedDatabase() {
     try {
         const [users] = await connection.query('SELECT COUNT(*) as count FROM Users');
         if (users[0].count === 0) {
-            await connection.query('
+            await connection.query(`
             INSERT INTO Users (username, email, password_hash, role) VALUES
             ('alice123', 'alice@example.com', 'hashed123', 'owner'),
             ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
             ('carol123', 'carol@example.com', 'hashed789', 'owner');
-          ');
+            `);
 
-            await connection.query('
+            await connection.query(
             INSERT INTO Dogs (owner_id, name, size) VALUES
             (1, 'Max', 'medium'),
             (3, 'Bella', 'small');
-            ');
+            );
