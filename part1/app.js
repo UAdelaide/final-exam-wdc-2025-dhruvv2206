@@ -16,3 +16,4 @@ async function seedDatabase() {
         const [users] = await connection.query('SELECT COUNT(*) as count FROM Users');
         if (users[0].count === 0) {
             await connection.query(`
+            INSERT INTO Users
