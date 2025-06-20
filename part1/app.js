@@ -4,4 +4,9 @@ const app = express();
 const port = 8080;
 
 const dbConfig = {
-    
+    host: 'localhost',
+    user: 'root',
+    database: 'DogWalkService'
+  };
+
+  let connection;
