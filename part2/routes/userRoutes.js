@@ -57,7 +57,8 @@ req.session.user ={
   role: user.role
 };
 
-if (user)
+if (user.role === 'owner'){
+  
 
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
