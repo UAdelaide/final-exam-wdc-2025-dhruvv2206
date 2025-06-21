@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({
     secret: 'supersecretkey',
     resave: false,
-    saveUninitialised: true
+    saveUninitialized: false
   }));
 
 // Middleware
