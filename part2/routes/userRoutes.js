@@ -58,7 +58,8 @@ req.session.user ={
 };
 
 if (user.role === 'owner'){
-  return res.redirect('/')
+  return res.redirect('/owner-dashboard.html');
+else if
 
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
