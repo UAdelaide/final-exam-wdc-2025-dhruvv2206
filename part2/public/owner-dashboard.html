@@ -115,9 +115,9 @@
                 if (!res.ok) throw new Error('Failed to load dog list');
                 dogs.value = await res.json();
               } catch (err) {
-    error.value = 'Could not load dogs';
-  }
-}
+                error.value = 'Could not load dogs';
+              }
+            }
             message.value = result.message;
             error.value = '';
             form.value = {
