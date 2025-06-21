@@ -71,6 +71,7 @@ if (user.role === 'owner'){
 }
 
 //Logout Route
+router.get('/logout')
 
 });
 
