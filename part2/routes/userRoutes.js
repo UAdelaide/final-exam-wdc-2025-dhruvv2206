@@ -63,7 +63,7 @@ if (user.role === 'owner'){
   return res.redirect('/walker-dashboard.html');
 } else {
   return res.status(400).send('Unknown role');
-  
+}
 
 
     res.json({ message: 'Login successful', user: rows[0] });
