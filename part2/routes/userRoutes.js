@@ -57,6 +57,8 @@ req.session.user ={
   role: user.role
 };
 
+if (user)
+
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
