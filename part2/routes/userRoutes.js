@@ -58,7 +58,7 @@ req.session.user ={
 };
 
 if (user.role === 'owner'){
-  
+  return res.redirect('/')
 
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
