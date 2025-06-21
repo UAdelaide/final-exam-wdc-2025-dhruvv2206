@@ -109,6 +109,7 @@
             const result = await res.json();
 
             if (!res.ok) throw new Error(result.error || 'Error submitting walk request');
+            
             async function loadDogs() {
               try {
                 const res = await fetch('/my-dogs');
