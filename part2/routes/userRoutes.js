@@ -71,7 +71,8 @@ if (user.role === 'owner'){
 }
 
 //Logout Route
-router.get('/logout', (req, res)=>
+router.get('/logout', (req, res)=> {
+req.session.destroy(err)
 
 });
 
