@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const app = express();
 
-app.use(session)
+app.use(bodyParser.urlencoded)
 
 // Middleware
 app.use(express.json());
