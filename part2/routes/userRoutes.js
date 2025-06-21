@@ -74,7 +74,8 @@ if (user.role === 'owner'){
 router.get('/logout', (req, res)=> {
   req.session.destroy(err => {
     if (err) {
-console.error('Logout error:')
+console.error('Logout error:' err);
+
 
 });
 
