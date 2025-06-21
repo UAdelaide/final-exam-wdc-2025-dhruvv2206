@@ -88,7 +88,7 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
-        //const dogs
+        
 
         async function loadWalks() {
           try {
@@ -135,7 +135,8 @@
           walks,
           message,
           error,
-          submitWalkRequest
+          submitWalkRequest,
+          dogs
         };
       }
     }).mount('#app');
