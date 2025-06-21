@@ -111,10 +111,10 @@
             if (!res.ok) throw new Error(result.error || 'Error submitting walk request');
             async function loadDogs() {
               try {
-    const res = await fetch('/my-dogs');
-    if (!res.ok) throw new Error('Failed to load dog list');
-    dogs.value = await res.json();
-  } catch (err) {
+                const res = await fetch('/my-dogs');
+                if (!res.ok) throw new Error('Failed to load dog list');
+                dogs.value = await res.json();
+              } catch (err) {
     error.value = 'Could not load dogs';
   }
 }
