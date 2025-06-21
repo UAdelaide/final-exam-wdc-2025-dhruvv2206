@@ -52,7 +52,7 @@
         async function getCurrentUser(){
           try{
             const res = await fetch('/me');
-            if
+            if (!res.ok) throw new error
 
 
         async function loadWalkRequests() {
