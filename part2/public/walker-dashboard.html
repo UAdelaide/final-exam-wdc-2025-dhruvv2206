@@ -54,7 +54,8 @@
             const res = await fetch('/me');
             if (!res.ok) throw new Error('Failed to fetch user info');
             const user = await res.json();
-            userId.value
+            userId.value = user.id;
+          } catch (err){}
 
 
         async function loadWalkRequests() {
