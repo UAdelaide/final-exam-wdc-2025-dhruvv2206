@@ -73,7 +73,8 @@ if (user.role === 'owner'){
 //Logout Route
 router.get('/logout', (req, res)=> {
   req.session.destroy(err => {
-    if err
+    if (err) {
+console.error
 
 });
 
