@@ -68,6 +68,7 @@ if (user.role === 'owner'){
 
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
+    console.error('Login error:', error);
     res.status(500).json({ error: 'Login failed' });
   }
 });
