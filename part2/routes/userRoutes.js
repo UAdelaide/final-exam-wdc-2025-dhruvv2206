@@ -69,6 +69,9 @@ if (user.role === 'owner'){
   console.error('Login error:', error);
   res.status(500).send('Login failed');
 }
+
+//Logout Route
+
 });
 
 module.exports = router;
