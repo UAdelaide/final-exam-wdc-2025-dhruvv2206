@@ -8,7 +8,10 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({
-    secret
+    secret: 'supersecretkey', // 🔐 Change to a secure secret in production
+    resave: false,
+    saveUninitialized: true
+  }));
 
 // Middleware
 app.use(express.json());
