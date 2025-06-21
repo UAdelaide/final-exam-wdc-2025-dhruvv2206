@@ -8,7 +8,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({
-    
+    secret
 
 // Middleware
 app.use(express.json());
