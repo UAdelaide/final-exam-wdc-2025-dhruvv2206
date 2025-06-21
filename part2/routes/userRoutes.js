@@ -65,12 +65,10 @@ if (user.role === 'owner'){
   return res.status(400).send('Unknown role');
 }
 
-
-    res.json({ message: 'Login successful', user: rows[0] });
-  } catch (error) {
-    console.error('Login error:', error);
-    res.status(500).json({ error: 'Login failed' });
-  }
+} catch (error) {
+  console.error('Login error:', error);
+  res.status(500).send('Login failed');
+}
 });
 
 module.exports = router;
