@@ -53,7 +53,8 @@ router.post('/login', async (req, res) => {
 
 req.session.user ={
   id: user.user_id,
-username:
+  username: user.username,
+role
 
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
