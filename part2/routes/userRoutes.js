@@ -71,7 +71,7 @@ if (user.role === 'owner'){
 }
 
 //Logout Route
-router.get('/logout')
+router.get('/logout', (req, res)=>)
 
 });
 
