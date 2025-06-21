@@ -61,7 +61,7 @@ if (user.role === 'owner'){
   return res.redirect('/owner-dashboard.html');
 } else if (user.role === 'walker'){
   return res.redirect('/walker-dashboard.html');
-}
+} else {
 
 
     res.json({ message: 'Login successful', user: rows[0] });
