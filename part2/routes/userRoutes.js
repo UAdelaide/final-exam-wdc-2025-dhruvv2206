@@ -69,6 +69,7 @@ if (user.role === 'owner'){
   console.error('Login error:', error);
   res.status(500).send('Login failed');
 }
+});
 
 //Logout Route
 router.get('/logout', (req, res) => {
