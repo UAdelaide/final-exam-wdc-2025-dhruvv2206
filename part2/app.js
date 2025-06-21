@@ -8,7 +8,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({
-    secret: 'supersecretkey', // 🔐 Change to a secure secret in production
+    secret: 'supersecretkey',
     resave: false,
     saveUninitialized: true
   }));
